@@ -1,0 +1,69 @@
+@import 'variables.scss';
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.templates {
+  min-height: 40vh;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $space-base;
+}
+
+.form {
+  padding: $space-base;
+  min-height: 40vh;
+  width: 40%;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+}
+
+.button {
+  text-decoration: none;
+  padding: $space-small;
+  border-radius: $border-radius-base;
+  border: 1px solid $color-grey-800;
+  color: $color-grey-800;
+  cursor: pointer;
+  @include stack-space($space-base);
+  &--white {
+    border: 2px solid $color-grey-400;
+    color: $color-grey-200;
+  }
+}
+
+.input {
+  text-decoration: none;
+  padding: $space-small;
+  border-radius: $border-radius-base;
+  border: 1px solid $color-grey-800;
+  color: $color-grey-800;
+  @include stack-space($space-base);
+}
+
+.drug-modal {
+  display: none;
+  padding: $space-x-large $space-xxx-large;
+  border: 1px dashed $color-grey-400;
+  box-shadow: 0 0 25px rgba(0,0,0,0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  &--active {
+    display: block;
+  }
+}

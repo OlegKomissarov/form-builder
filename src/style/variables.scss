@@ -1,0 +1,63 @@
+$space-x-small: 3px;
+$space-small: 6px;
+$space-pre-base: 9px;
+$space-base: 12px;
+$space-large: 18px;
+$space-x-large: 24px;
+$space-xx-large: 32px;
+$space-xxx-large: 60px;
+
+$font-size-small: 14px;
+$font-size-base: 18px;
+$font-size-large: 24px;
+$font-size-x-large: 32px;
+
+$font-weight-tiny: 300;
+$font-weight-base: 400;
+$font-weight-bold: 500;
+
+$color-white: #ffffff;
+$color-grey-200: #eeeeee;
+$color-grey-300: #cfc9c4;
+$color-grey-400: #8a8988;
+$color-grey-800: #282c34;
+$color-blue: #5ec4b2;
+
+$xs: 320px;
+$sm: 640px;
+$md: 1024px;
+$lg: 1280px;
+
+$columns-in-row-xs: 2;
+$columns-in-row-sm: 4;
+$columns-in-row-md: 5;
+$columns-in-row-lg: 10;
+
+$border-radius-small: 2px;
+$border-radius-base: 3px;
+
+$logo-size: 40px;
+
+@mixin media-breakpoint-up($breakpoint) {
+  @media (min-width: $breakpoint + 1) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-down($breakpoint) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin inline-space($space) {
+  &:not(:last-child) {
+    margin-right: $space;
+  }
+}
+
+@mixin stack-space($space) {
+  &:not(:last-child) {
+    margin-bottom: $space;
+  }
+}
