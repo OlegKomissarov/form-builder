@@ -28,9 +28,9 @@ class App extends Component {
     }
     this.setState({ druggingElementName: null })
   }
-  resetDrugEvents = (e, drug) => {
+  resetDrugEvents = (e) => {
     document.onmousemove = null
-    drug.onmouseup = null
+    e.target.onmouseup = null
     this.setState({ druggingElementName: null })
   }
   resetNativeDrugging = () => false
